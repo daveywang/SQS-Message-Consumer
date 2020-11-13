@@ -5,7 +5,7 @@
  *  Date: 06/2019
  */
 
-package com.ascending;
+package org.liwei;
 
 import com.amazon.sqs.javamessaging.ProviderConfiguration;
 import com.amazon.sqs.javamessaging.SQSConnection;
@@ -20,7 +20,7 @@ import javax.jms.*;
 import java.io.IOException;
 
 public class SQSMessageConsumer {
-    private static final String queueName = "training_queue_ascending_com";
+    private static final String queueName = "training_queue_liwei_org";
     private static Logger logger = LoggerFactory.getLogger(SQSMessageConsumer.class);
 
     public static void main(String[] args) throws JMSException, IOException {

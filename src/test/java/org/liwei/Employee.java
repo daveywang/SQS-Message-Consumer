@@ -2,10 +2,10 @@
  *  Copyright 2019, Liwei Wang <daveywang@live.com>.
  *  All rights reserved.
  *  Author: Liwei Wang
- *  Date: 10/2019
+ *  Date: 06/2019
  */
 
-package com.ascending;
+package org.liwei;
 
 import java.lang.Comparable;
 import java.nio.charset.StandardCharsets;
@@ -68,13 +68,58 @@ public class Employee implements Comparable<Object>, Comparator<Employee>, Seria
         return new String(decodedByteArray);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(int ssn) {
+        this.ssn = ssn;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public static void main(String[] args) {
         Employee e1 = new Employee(1, 11111, "David", "Wang");
-        Employee e2 = new Employee(2, 22222, "Ryo", "Hang");
+        Employee e2 = new Employee(2, 22222, "Ryo", "Wang");
         Employee e3 = null;
         Employee e4 = null;
-
         System.out.println("e1= " + e1 + "\ne2= " + e2);
+
+        System.out.println("last name equal? " + (e1.getLastName() == e2.getLastName()));
+
+        System.out.println("Hash code of e1: " + e1.hashCode());
+        System.out.println("Hash code of e2: " + e2.hashCode());
+
 
         //Serialization
 
